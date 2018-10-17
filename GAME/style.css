@@ -1,0 +1,70 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#container {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  border: 2px solid lightblue;
+  background-color: lightblue;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 90px;
+}
+
+#bird {
+  position: absolute;
+  background: url('bird.png');
+  height: 42px;
+  width: 65px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20%;
+  left: 15%;
+}
+
+.pole {
+  position: absolute;
+  height: 170px;
+  width: 50px;
+  background-color: green;
+  right: -50px;
+}
+
+#pole_1 {
+  top: 0;
+}
+
+#pole_2 {
+  bottom: 0;
+}
+
+#pole_3 {
+  top: 0;
+}
+
+#pole_4 {
+  bottom: 0;
+}
+
+#score_div {
+  text-align: center;
+  font-size: 30px;
+}
+
+#restart_btn {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: lightblue;
+  color: white;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
