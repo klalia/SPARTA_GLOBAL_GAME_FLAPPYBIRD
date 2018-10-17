@@ -54,11 +54,57 @@ body {
 #score_div {
   text-align: center;
   font-size: 30px;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-size: 30px;
+  line-height: 1.42857143;
+  color: #685EF2;
+}
+
+#score_div1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-size: 30px;
+  line-height: 1.42857143;
+  color: #685EF2;
+
 }
 
 #restart_btn {
+  cursor: pointer;
+  display: none;
   position: absolute;
-  top: 0;
+  top: 0%;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  background: transparent;
+  border: none !important;
+  color: white;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: 37%;
+  text-align: center;
+  margin-top: 90px;
+}
+
+#restart_btn1 {
+  position: absolute;
+  top: -5%;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  color: red;
+  font-size: 35px;
+  border: none;
+  display: none;
+}
+
+#start_btn {
+  position: absolute;
+  top: 29%;
   width: 100%;
   padding: 20px;
   background-color: lightblue;
@@ -66,5 +112,90 @@ body {
   font-size: 35px;
   border: none;
   cursor: pointer;
-  display: none;
+}
+
+#start_btn:hover{
+  background-color: lightgreen;
+}
+
+#startgame_btn {
+  position: absolute;
+  top: 0%;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  background-color: lightblue;
+  background: transparent;
+  border: none !important;
+  color: white;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: 37%;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 10%;
+}
+h2{
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  color: #685EF2;
+}
+
+h4{
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #685EF2;
+}
+
+#key{
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  color: #685EF2;
+}
+
+#info{
+  margin-top: -8%;
+  text-align: center;
+  width: 30%;
+  margin-left: 65%;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #685EF2;
+}
+
+#home{
+  margin-top: -28%;
+  margin-left: 15%;
+}
+
+#house{
+  margin-top: 7%;
+  margin-left: 47%;
+}
+
+h1{
+  text-align: center;
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-size: 30px;
+  color: lightgreen;
 }

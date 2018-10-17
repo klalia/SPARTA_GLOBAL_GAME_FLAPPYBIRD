@@ -9,6 +9,7 @@ $(function () {
   var score = $('#score');
   var speed_span = $('#speed');
   var restart_btn = $('#restart_btn');
+  var restart_btn1 = $('#restart_btn1');
 
   //saving the initial setup
   var container_width = parseInt(container.width());
@@ -105,6 +106,7 @@ $(function () {
     clearInterval(the_game);
     game_over = true;
     restart_btn.slideDown();
+    restart_btn1.slideDown();
   }
 
   // $(document).onClick('keydown', function(e){
@@ -114,7 +116,11 @@ $(function () {
   // }
     restart_btn.click(function(){
     location.reload();
-   });
+  });
+
+    restart_btn1.click(function(){
+    location.reload();
+  });
 
   function collision($div1, $div2) {
     var x1 = $div1.offset().left;
