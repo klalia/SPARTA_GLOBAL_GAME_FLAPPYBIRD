@@ -6,8 +6,6 @@ $(function () {
   var pole = $('.pole');
   var pole_1 = $('#pole_1');
   var pole_2 = $('#pole_2');
-  var pole_3 = $('#pole_3');
-  var pole_4 = $('#pole_4');
   var score = $('#score');
   var speed_span = $('#speed');
   var restart_btn = $('#restart_btn');
@@ -54,8 +52,6 @@ $(function () {
         //change the pole's height
         pole_1.css('height', pole_initial_height + new_height);
         pole_2.css('height', pole_initial_height - new_height);
-        pole_3.css('height', pole_initial_height + new_height);
-        pole_4.css('height', pole_initial_height - new_height);
 
         //increase the speed per obstacle
         speed = speed + 1;
@@ -72,61 +68,53 @@ $(function () {
       //to move the poles we should increase it, moving the pole right to left
       pole.css('right', pole_current_position + speed);
 
-      // if (go_up === false) {
-      //     go_down();
-      // }
+      if (go_up === false) {
+        go_down();
+      }
     }
 
   }, 40);
 
-  var birdLeft = 100;
-  var birdTop = 100;
+  $(document).on('keydown', function (e) {
+    var key = e.keyCode;
+      //if the key is equal to space then go up will be updated with the function which will run every 50 milliseconds
+      //and the function will be the up function
+     if (key === 32 && go_up === false && game_over === false) {
+        go_up = setInterval(up, 40);
+      }
+  });
 
-  function anim(e){
-    if (e.keyCode == 38){
-      birdTop -=10;
-      document.getElementById('bird').style.top = top + 'px';
-    }
-    if (e.keyCode == 40){
-      birdTop +=10;
-      document.getElementById('bird').style.top = top + 'px';
-    }
+  $(document).on('keyup', function (e) {
+    var key = e.keyCode;
+      if (key === 32) {
+        clearInterval(go_up);
+        go_up = false;
+      }
+  });
+
+  function go_down() {
+   // setting the css top for the bird and increasing it by 5
+    bird.css('top', parseInt(bird.css('top')) + 5);
   }
 
-    // $(document).on('keydown', function (e) {
-    //     var key = e.keyCode;
-    //       //if the key is equal to space then go up will be updated with the function which will run every 50 milliseconds and the function will be the up function
-    //     if (key === 32 && go_up === false && game_over === false) {
-    //         go_up = setInterval(up, 50);
-    //     }
-    // });
-    //
-    // $(document).on('keyup', function (e) {
-    //     var key = e.keyCode;
-    //     if (key === 32) {
-    //         clearInterval(go_up);
-    //         go_up = false;
-    //     }
-    // });
-    //
-    // function go_down() {
-    // // setting the css top for the bird and increasing it by 5
-    //     bird.css('top', parseInt(bird.css('top')) + 5);
-    // }
-    //
-    // function up() {
-    //     bird.css('top', parseInt(bird.css('top')) - 10);
-    // }
+  function up() {
+    bird.css('top', parseInt(bird.css('top')) - 10);
+  }
 
   function stop_the_game() {
-      clearInterval(the_game);
-      game_over = true;
-      restart_btn.slideDown();
+    clearInterval(the_game);
+    game_over = true;
+    restart_btn.slideDown();
   }
 
-  restart_btn.click(function(){
+  // $(document).onClick('keydown', function(e){
+  //   var key = e.keyCode;
+  //   if (key === 32){
+  //   location.reload();
+  // }
+    restart_btn.click(function(){
     location.reload();
-  });
+   });
 
   function collision($div1, $div2) {
     var x1 = $div1.offset().left;
