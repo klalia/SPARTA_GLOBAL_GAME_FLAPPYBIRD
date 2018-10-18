@@ -137,16 +137,16 @@ body {
 h2{
   text-align: center;
   margin-top: 2%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 34%;
+  margin-right: 34%;
   font-family: helvetica;
   color: #685EF2;
 }
 
 h4{
   text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 34%;
+  margin-right: 34%;
   font-family: helvetica;
   font-size: 14px;
   line-height: 1.42857143;
@@ -166,7 +166,7 @@ h4{
   margin-top: -12%;
   text-align: center;
   width: 30%;
-  margin-left: 65%;
+  margin-left: 67%;
   font-family: helvetica;
   font-size: 14px;
   line-height: 1.42857143;
@@ -188,4 +188,9 @@ h1{
   font-family: helvetica;
   font-size: 30px;
   color: lightgreen;
+}
+
+#help{
+  margin-top: -5.5%;
+  margin-left:60%;
 }

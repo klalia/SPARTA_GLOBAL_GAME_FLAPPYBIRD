@@ -26,6 +26,8 @@ $(function () {
   var score_updated = false;
   var game_over = false;
 
+
+
   //set interval function which runs every 40 milliseconds
   var the_game = setInterval(function () {
 
@@ -78,6 +80,8 @@ $(function () {
   }, 40);
 
   $(document).on('keydown', function (e) {
+    var audio = new Audio('flap.mp3');
+    audio.play();
     var key = e.keyCode;
       //if the key is equal to space then go up will be updated with the function which will run every 50 milliseconds
       //and the function will be the up function
@@ -106,6 +110,8 @@ $(function () {
   }
 
   function stop_the_game() {
+    var audio = new Audio('gameover.mp3');
+    audio.play();
     clearInterval(the_game);
     game_over = true;
     restart_btn.slideDown();
@@ -114,7 +120,7 @@ $(function () {
 
   restart_btn.click(function(){
   location.reload();
-  });
+});
 
   //you get the offset and dimension of the divs and check whether they overlap.
   function collision($div1, $div2) {
