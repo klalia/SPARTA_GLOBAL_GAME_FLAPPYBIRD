@@ -19,8 +19,8 @@ body {
 #bird {
   position: absolute;
   background: url('bird.png');
-  height: 40px;
-  width: 45px;
+  height: 41px;
+  width: 41px;
   background-size: contain;
   background-repeat: no-repeat;
   top: 20%;
@@ -54,20 +54,10 @@ body {
 #score_div {
   text-align: center;
   font-size: 30px;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: helvetica;
   font-size: 30px;
   line-height: 1.42857143;
   color: #685EF2;
-}
-
-#score_div1 {
-  text-align: center;
-  font-size: 30px;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
-  font-size: 30px;
-  line-height: 1.42857143;
-  color: #685EF2;
-
 }
 
 #restart_btn {
@@ -107,7 +97,7 @@ body {
   top: 29%;
   width: 100%;
   padding: 20px;
-  background-color: lightblue;
+  background-color: lightgreen;
   color: white;
   font-size: 35px;
   border: none;
@@ -115,7 +105,7 @@ body {
 }
 
 #start_btn:hover{
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
 #startgame_btn {
@@ -149,7 +139,7 @@ h2{
   margin-top: 2%;
   margin-left: 25%;
   margin-right: 25%;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: helvetica;
   color: #685EF2;
 }
 
@@ -157,7 +147,7 @@ h4{
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: helvetica;
   font-size: 14px;
   line-height: 1.42857143;
   color: #685EF2;
@@ -168,19 +158,19 @@ h4{
   margin-top: 2%;
   margin-left: 25%;
   margin-right: 25%;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: helvetica;
   color: #685EF2;
 }
 
 #info{
-  margin-top: -8%;
+  margin-top: -12%;
   text-align: center;
   width: 30%;
   margin-left: 65%;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: helvetica;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #685EF2;
+  color: red;
 }
 
 #home{
@@ -195,7 +185,7 @@ h4{
 
 h1{
   text-align: center;
-  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-family: helvetica;
   font-size: 30px;
   color: lightgreen;
 }

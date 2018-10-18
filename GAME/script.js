@@ -22,6 +22,7 @@ $(function () {
 
   //other declarations
   var go_up = false;
+  var go_upI = false;
   var score_updated = false;
   var game_over = false;
 
@@ -48,7 +49,7 @@ $(function () {
       //when the pole goes out of the container, we have to bring it back- so check if the poles went out of the container
       // if the pole went out of the container
       if (pole_current_position > container_width) {
-        var new_height = parseInt(Math.random() * 100);
+        var new_height = parseInt(Math.random() * 150);
 
         //change the pole's height
         pole_1.css('height', pole_initial_height + new_height);
@@ -81,14 +82,16 @@ $(function () {
       //if the key is equal to space then go up will be updated with the function which will run every 50 milliseconds
       //and the function will be the up function
      if (key === 32 && go_up === false && game_over === false) {
-        go_up = setInterval(up, 40);
+        go_upI = setInterval(up, 40);
+        go_up = true;
+
       }
   });
 
   $(document).on('keyup', function (e) {
     var key = e.keyCode;
       if (key === 32) {
-        clearInterval(go_up);
+        clearInterval(go_upI);
         go_up = false;
       }
   });
@@ -109,66 +112,28 @@ $(function () {
     restart_btn1.slideDown();
   }
 
-  // $(document).onClick('keydown', function(e){
-  //   var key = e.keyCode;
-  //   if (key === 32){
-  //   location.reload();
-  // }
-    restart_btn.click(function(){
-    location.reload();
+  restart_btn.click(function(){
+  location.reload();
   });
 
-    restart_btn1.click(function(){
-    location.reload();
-  });
-
+  //you get the offset and dimension of the divs and check whether they overlap.
   function collision($div1, $div2) {
-    var x1 = $div1.offset().left;
+    var x1 = $div1.offset().left; //  get the position of the first div (the left position (inc any padding and borders))
     var y1 = $div1.offset().top;
     var h1 = $div1.outerHeight(true);
-    var w1 = $div1.outerWidth(true);
+    var w1 = $div1.outerWidth(true); //gets the width of the whole first div
     var b1 = y1 + h1;
-    var r1 = x1 + w1;
-    var x2 = $div2.offset().left;
+    var r1 = x1 + w1; //adds the inital position of the bird to the width of the bord to get to the top right corner of the width
+    var x2 = $div2.offset().left; //gets the position of the second div on the left side
     var y2 = $div2.offset().top;
     var h2 = $div2.outerHeight(true);
     var w2 = $div2.outerWidth(true);
     var b2 = y2 + h2;
     var r2 = x2 + w2;
 
+    // if the top right corner of the first div meets the left side of the second then there is a collision, so the width of the pole needs to be bigger
+
     if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
       return true;
   }
 });
-
-//     function collision($div1, $div2) {
-//         var x1 = $div1.offset().left;
-//       //  get the position of the first div (the left position (inc any padding and borders))
-//
-//         var y1 = $div1.offset().top;
-//
-//         var h1 = $div1.outerHeight(true);
-//
-//         var w1 = $div1.outerWidth(true);
-//         //gets the width of the whole first div
-//
-//         var b1 = y1 + h1;
-//
-//         var r1 = x1 + w1;
-//         //adds the inital position of the bird to the width of the bord to get to the top right corner of the width
-//
-//         var x2 = $div2.offset().left;
-//         //gets the position of the second div on the left side
-//
-//         var y2 = $div2.offset().top;
-//         var h2 = $div2.outerHeight(true);
-//         var w2 = $div2.outerWidth(true);
-//         var b2 = y2 + h2;
-//         var r2 = x2 + w2;
-//
-//         // if the top right corner of the first div meets the left side of the second then there is a collision, so the width of the pole needs to be bigger
-//
-//         if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
-//         return true;
-//
-// }
