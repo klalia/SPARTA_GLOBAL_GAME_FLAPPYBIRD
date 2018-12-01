@@ -80,7 +80,7 @@ $(function () {
   }, 40);
 
   $(document).on('keydown', function (e) {
-    var audio = new Audio('flap.mp3');
+    var audio = new Audio('../audio/flap.mp3');
     audio.play();
     var key = e.keyCode;
       //if the key is equal to space then go up will be updated with the function which will run every 50 milliseconds
@@ -110,7 +110,7 @@ $(function () {
   }
 
   function stop_the_game() {
-    var audio = new Audio('gameover.mp3');
+    var audio = new Audio('../audio/gameover.mp3');
     audio.play();
     clearInterval(the_game);
     game_over = true;
