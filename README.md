@@ -1,3 +1,4 @@
 # SPARTA_GLOBAL_GAME_FLAPPYBIRD
 
-My attempt to build the game Flappy Bird, using HTML, CSS, Javascript and JQuery. The game is based on a bird that is controlled using the spacebar by you to fly through obstacles. The game start page includes a list of instructions on how to play, which is the first page displayed once the game is opened.
+The game start page includes a list of instructions on how to play, which is the first page displayed once the game is opened (start.html).My attempt to build the game Flappy Bird, utilising HTML, CSS, Javascript and JQuery. This project was over the course of four days, with the task split into two sprints. GitHub and Trello were also used to help prioritise tasks and to track changes made to the project. The game ran continuously, where players avoided obstacles with points awarded for every obstacle cleared. As the game progresses, the difficulty and speed increase to provide further challenges. Being new to JavaScript, this project challenged my ability to research and apply new techniques and gave me a greater understanding of jQuery.
+
