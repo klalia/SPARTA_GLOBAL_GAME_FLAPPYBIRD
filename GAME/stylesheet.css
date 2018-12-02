@@ -1,0 +1,197 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#container {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  border: 2px solid lightblue;
+  background-color: lightblue;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 90px;
+}
+
+#bird {
+  position: absolute;
+  background: url('../images/bird.png');
+  height: 41px;
+  width: 41px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20%;
+  left: 15%;
+}
+
+.pole {
+  position: absolute;
+  height: 170px;
+  width: 50px;
+  background-color: green;
+  right: -50px;
+}
+
+#pole_1 {
+  top: 0;
+}
+
+#pole_2 {
+  bottom: 0;
+}
+
+#pole_3 {
+  top: 0;
+}
+
+#pole_4 {
+  bottom: 0;
+}
+
+#score_div {
+  text-align: center;
+  font-size: 30px;
+  font-family: helvetica;
+  font-size: 30px;
+  line-height: 1.42857143;
+  color: #685EF2;
+}
+
+#restart_btn {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0%;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  background: transparent;
+  border: none !important;
+  color: white;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: 37%;
+  text-align: center;
+  margin-top: 90px;
+}
+
+#restart_btn1 {
+  position: absolute;
+  top: -5%;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  color: red;
+  font-size: 35px;
+  border: none;
+  display: none;
+}
+
+#start_btn {
+  position: absolute;
+  top: 29%;
+  width: 100%;
+  padding: 20px;
+  background-color: lightgreen;
+  color: white;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+#start_btn:hover{
+  background-color: lightblue;
+}
+
+#startgame_btn {
+  position: absolute;
+  top: 0%;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  background-color: lightblue;
+  background: transparent;
+  border: none !important;
+  color: white;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: 37%;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 10%;
+  margin-top:-4%;
+}
+h2{
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 34%;
+  margin-right: 34%;
+  font-family: helvetica;
+  color: #685EF2;
+}
+
+h4{
+  text-align: center;
+  margin-left: 34%;
+  margin-right: 34%;
+  font-family: helvetica;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #685EF2;
+}
+
+#key{
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: helvetica;
+  color: #685EF2;
+}
+
+#info{
+  margin-top: -12%;
+  text-align: center;
+  width: 30%;
+  margin-left: 67%;
+  font-family: helvetica;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: red;
+}
+
+#home{
+  margin-top: -28%;
+  margin-left: 15%;
+}
+
+#house{
+  margin-top: 7%;
+  margin-left: 47%;
+}
+
+h1{
+  text-align: center;
+  font-family: helvetica;
+  font-size: 30px;
+  color: lightgreen;
+}
+
+#help{
+  margin-top: -5.5%;
+  margin-left:60%;
+}
